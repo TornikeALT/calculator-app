@@ -1,0 +1,389 @@
+:root {
+  /* Theme I */
+  /* Backgrounds */
+  --Verydark-desaturated-blue-bg: hsl(222, 26%, 31%);
+  --Verydark-desaturated-blue-keypad: hsl(223, 31%, 20%);
+  --Verydark-desaturated-blue-screen: hsl(224, 36%, 15%);
+  /* Keys */
+  --Desaturated-dark-blue-bg: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-shadow: hsl(224, 28%, 35%);
+  --red-toggle: hsl(6, 63%, 50%);
+  --Darkred-shadow: hsl(6, 70%, 34%);
+  --Light-grayish-orange-bg: hsl(30, 25%, 89%);
+  --Grayish-orange-shadow: hsl(28, 16%, 65%);
+  /* Text */
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  font-family: 'League Spartan', sans-serif;
+
+  /* Theme II */
+  /* Backgrounds */
+  --Light-gray-main: hsl(0, 0%, 90%);
+  --Grayish-red-keypad: hsl(0, 5%, 81%);
+  --very-light-gray-screen: hsl(0, 0%, 93%);
+  /* Keys */
+  --Dark-moderate-cyan-bg: hsl(185, 42%, 37%);
+  --Very-dark-cyan-shadow: hsl(185, 58%, 25%);
+  --Orange-toggle: hsl(25, 98%, 40%);
+  --Dark-orange-shadow: hsl(25, 99%, 27%);
+  --Light-grayish-yellow-bg: hsl(45, 7%, 89%);
+  --Dark-grayish-orange-shadow: hsl(35, 11%, 61%);
+  /* Text */
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+
+  /* Theme III */
+  /* Backgrounds */
+  --Very-dark-violet-bg-main: hsl(268, 75%, 9%);
+  --Very-dark-violet-keypad: hsl(268, 71%, 12%);
+  /* Keys */
+  --Dark-violet-bg: hsl(281, 89%, 26%);
+  --Vivid-magenta-shadow: hsl(285, 91%, 52%);
+  --Pure-cyan-toggle: hsl(176, 100%, 44%);
+  --Soft-cyan-shadow: hsl(177, 92%, 70%);
+  --Very-dark-violet-bg: hsl(268, 47%, 21%);
+  --Dark-magenta-shadow: hsl(290, 70%, 36%);
+  /* TEXT */
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+  --White: hsl(0, 0%, 100%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 32px;
+}
+
+body {
+  background-color: var(--Verydark-desaturated-blue-bg);
+}
+
+.theme1 {
+  background-color: var(--Verydark-desaturated-blue-bg);
+}
+
+.theme2 {
+  background-color: var(--Light-gray-main);
+}
+
+.theme3 {
+  background-color: var(--Very-dark-violet-bg-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 4rem auto 0 auto;
+  padding: 1rem;
+}
+
+.calculator {
+  max-width: 18rem;
+  width: 100%;
+  margin: auto;
+}
+
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  position: relative;
+}
+
+.bullets {
+  display: flex;
+  color: white;
+}
+
+.bullets ul {
+  display: flex;
+  gap: 12px;
+}
+
+.bullets p {
+  margin-right: 12px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--Verydark-desaturated-blue-keypad);
+  padding: 1rem;
+  border-radius: 10px
+}
+
+.grid-item {
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  color: var(--Very-dark-grayish-blue);
+  box-shadow: 0px 5px var(--Grayish-orange-shadow);
+}
+
+.half-width {
+  grid-column: span 2;
+}
+
+.result {
+  background-color: var(--Verydark-desaturated-blue-screen);
+  margin: 1rem 0;
+  padding: 1rem 16px;
+  color: white;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 10px
+}
+
+.grid-item {
+  background-color: var(--Light-grayish-orange-bg);
+  border: none;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.grid-item:hover {
+  background-color: var(--White);
+}
+
+.reset,
+.del {
+  background-color: var(--Desaturated-dark-blue-bg);
+  color: white;
+  box-shadow: 0px 5px var(--Desaturated-dark-blue-shadow);
+  border: none;
+  transition: ease 0.3s;
+}
+
+.equals {
+  background-color: var(--red-toggle);
+  color: white;
+  box-shadow: 0px 5px var(--Darkred-shadow);
+  border: none;
+  transition: ease 0.3s;
+}
+
+.title h6 {
+  margin-right: 3.5rem;
+  font-size: 14px;
+}
+
+.theme-switcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1rem;
+  position: absolute;
+  right: 0;
+}
+
+.bullet_bg {
+  position: relative;
+  width: 100%;
+  background-color: var(--Verydark-desaturated-blue-keypad);
+  height: 28px;
+  border-radius: 30px;
+}
+
+.bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--red-toggle);
+  transition: left 0.3s ease-in-out;
+  position: absolute;
+  top: 14%;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.bullet.theme1:hover {
+  background-color: hsl(5.7, 73.3%, 66.3%);
+  cursor: pointer;
+}
+
+
+.numbers {
+  display: flex;
+  margin-top: 10px;
+  position: relative;
+}
+
+.numbers span {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.reset:hover,
+.del:hover {
+  background-color: hsl(224.5, 37.2%, 69.4%);
+}
+
+.equals:hover {
+  background-color: hsl(5.7, 73.3%, 66.3%);
+}
+
+
+.keys.theme2 {
+  background-color: var(--Grayish-red-keypad);
+}
+
+.result.theme2 {
+  background-color: white;
+  color: var(--Very-dark-grayish-blue);
+}
+
+.title.theme2 {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.bullet_bg.theme2 {
+  background-color: var(--Grayish-red-keypad);
+}
+
+.bullet.theme2 {
+  background-color: var(--Orange-toggle);
+  transition: 0.3s;
+
+}
+
+.bullet.theme2:hover {
+  background-color: hsl(24.9, 79.3%, 56.5%);
+  cursor: pointer;
+}
+
+.reset.theme2 {
+  background-color: var(--Dark-moderate-cyan-bg);
+  box-shadow: 0px 5px var(--Very-dark-cyan-shadow);
+  transition: ease 0.3s;
+}
+
+.reset.theme2:hover {
+  background-color: hsl(184.9, 42.4%, 55.1%);
+}
+
+.del.theme2 {
+  background-color: var(--Dark-moderate-cyan-bg);
+  box-shadow: 0px 5px var(--Very-dark-cyan-shadow);
+}
+
+.del.theme2:hover {
+  background-color: hsl(184.9, 42.4%, 55.1%);
+}
+
+.equals.theme2 {
+  background-color: var(--Orange-toggle);
+  box-shadow: 0px 5px var(--Dark-orange-shadow);
+  transition: ease 0.3s;
+}
+
+.equals.theme2:hover {
+  background-color: hsl(24.9, 79.3%, 56.5%);
+}
+
+.btn_color.theme2 {
+  color: var(--Very-dark-grayish-yellow);
+}
+
+/* theme III */
+.keys.theme3 {
+  background-color: var(--Very-dark-violet-keypad);
+}
+
+.result.theme3 {
+  background-color: var(--Very-dark-violet-keypad);
+  color: var(--Light-yellow);
+}
+
+.title.theme3 {
+  color: var(--Light-yellow);
+}
+
+.bullet_bg.theme3 {
+  background-color: var(--Very-dark-violet-keypad);
+}
+
+.bullet.theme3 {
+  background-color: var(--Pure-cyan-toggle);
+}
+
+.bullet.theme3:hover {
+  background-color: hsl(176, 73%, 68%);
+  cursor: pointer;
+}
+
+
+.reset.theme3 {
+  background-color: var(--Dark-violet-bg);
+  box-shadow: 0px 5px var(--Vivid-magenta-shadow);
+  transition: ease 0.3s;
+}
+
+.reset.theme3:hover {
+  background-color: hsl(281.1, 79.2%, 43.3%);
+}
+
+
+.del.theme3 {
+  background-color: var(--Dark-violet-bg);
+  box-shadow: 0px 5px var(--Vivid-magenta-shadow);
+  transition: ease 0.3s;
+}
+
+
+.del.theme3:hover {
+  background-color: hsl(281.1, 79.2%, 43.3%);
+}
+
+.equals.theme3 {
+  background-color: var(--Pure-cyan-toggle);
+  box-shadow: 0px 5px var(--Soft-cyan-shadow);
+  color: var(--Very-dark-blue);
+  transition: 0.3s;
+}
+
+.equals.theme3:hover {
+  background-color: hsl(176, 73%, 68%);
+}
+
+.btn_color.theme3 {
+  color: var(--Light-yellow);
+  background-color: var(--Very-dark-violet-bg);
+  box-shadow: 0px 5px var(--Dark-magenta-shadow);
+}
+
+.btn_color.theme3:hover {
+  background-color: hsl(267.8, 53.7%, 44.9%);
+}
+
+/* Responsive */
+@media only screen and (max-width:600px) {
+
+  .result {
+    padding: 15px 16px;
+    font-size: 1.3rem;
+  }
+
+  .keys {
+    gap: 14px;
+    padding: 25px;
+  }
+
+  .del,
+  .reset {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    margin-top: 1rem;
+  }
+
+}
