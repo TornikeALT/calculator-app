@@ -387,3 +387,9 @@ body {
   }
 
 }
+
+@media only screen and (max-width:375px) {
+  .result {
+    font-size: 30px;
+  }
+}
